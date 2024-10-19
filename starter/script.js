@@ -12,8 +12,8 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
 // starting conditions
-score0EL.textContent = 0;
-score1EL.textContent = 0;
+score0El.textContent = 0;
+score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
 let currentScore = 0;
@@ -25,12 +25,12 @@ btnRoll.addEventListener('click', function () {
   console.log(dice);
   // 2.display dice
   diceEl.classList.remove('hidden');
-  diceEl.src = dice - $(dice).png;
+  diceEl.src = `dice-${dice}.png`;
   // 3.check for roll 1:
   if (dice !== 1) {
     //add dice to curent score
     currentScore += dice;
-    current0El.textContent = currentScore;
+    current0El.textContent = currentScore; // change later
   } else {
     //switch to next player
   }
